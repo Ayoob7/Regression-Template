@@ -20,8 +20,8 @@ features_df = pd.get_dummies(df, columns=['garage_type', 'city'])
 del features_df['sale_price']
 
 # Create the X and y arrays
-X = features_df.as_matrix()
-y = df['sale_price'].as_matrix()
+X = features_df
+y = df['sale_price']
 
 # Split the data set in a training set (70%) and a test set (30%)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
